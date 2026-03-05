@@ -1,25 +1,169 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Nandini Portfolio</title>
+<title>Nandini | Portfolio</title>
+
+<style>
+
+body{
+margin:0;
+font-family:Arial, sans-serif;
+background:#0f172a;
+color:white;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 60px;
+background:#020617;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#38bdf8;
+}
+
+.hero{
+text-align:center;
+padding:120px 20px;
+animation:fadeIn 2s;
+}
+
+.hero h1{
+font-size:50px;
+}
+
+.hero span{
+color:#38bdf8;
+}
+
+section{
+max-width:1000px;
+margin:auto;
+padding:60px 20px;
+animation:fadeIn 2s;
+}
+
+h2{
+color:#38bdf8;
+margin-bottom:20px;
+}
+
+.projects{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:20px;
+}
+
+.card{
+background:#1e293b;
+padding:25px;
+border-radius:12px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+background:#334155;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
+}
+
+/* animations */
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+/* typing effect */
+
+.typing{
+border-right:3px solid #38bdf8;
+white-space:nowrap;
+overflow:hidden;
+width:0;
+animation:typing 3s steps(30,end) forwards;
+}
+
+@keyframes typing{
+from{width:0}
+to{width:300px}
+}
+
+</style>
+
 </head>
 
 <body>
 
-<h1>Nandini</h1>
-<p>Computer Science Student</p>
+<nav>
+<div><b>Nandini</b></div>
+<div>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Projects</a>
+<a href="#">Contact</a>
+</div>
+</nav>
 
+<div class="hero">
+<h1 class="typing">Hi, I'm Nandini</h1>
+<p>Computer Science Student | Future Developer</p>
+</div>
+
+<section>
 <h2>About Me</h2>
-<p>I am a first-year CSE student interested in programming and technology.</p>
+<p>
+First-year Computer Science student interested in programming,
+technology and building innovative projects.
+</p>
+</section>
 
+<section>
 <h2>Projects</h2>
-<ul>
-<li>Portfolio Website</li>
-<li>Future Coding Projects</li>
-</ul>
 
-<h2>Contact</h2>
-<p>LinkedIn: add later</p>
+<div class="projects">
+
+<div class="card">
+<h3>Portfolio Website</h3>
+<p>A personal portfolio website hosted using GitHub Pages.</p>
+</div>
+
+<div class="card">
+<h3>Future Coding Projects</h3>
+<p>Planning to build coding and development projects.</p>
+</div>
+
+</div>
+
+</section>
+
+<section>
+<h2>Skills</h2>
+<p>HTML • Programming Basics • Problem Solving</p>
+</section>
+
+<footer>
+<p>© 2026 Nandini</p>
+</footer>
 
 </body>
 </html>
