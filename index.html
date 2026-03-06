@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Nandini | Portfolio</title>
+<title>Nandini Garg | Portfolio</title>
 
 <style>
 
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family: 'Segoe UI', sans-serif;
 background:#0f172a;
 color:white;
+scroll-behavior:smooth;
 }
+
+/* NAVBAR */
 
 nav{
 display:flex;
 justify-content:space-between;
+align-items:center;
 padding:20px 60px;
 background:#020617;
+position:sticky;
+top:0;
 }
 
 nav a{
 color:white;
 text-decoration:none;
-margin-left:20px;
+margin-left:25px;
+font-weight:500;
 transition:0.3s;
 }
 
@@ -30,82 +37,96 @@ nav a:hover{
 color:#38bdf8;
 }
 
+/* HERO SECTION */
+
 .hero{
 text-align:center;
-padding:120px 20px;
-animation:fadeIn 2s;
+padding:140px 20px;
+background:linear-gradient(135deg,#0f172a,#1e293b);
 }
 
 .hero h1{
-font-size:50px;
+font-size:60px;
+margin-bottom:10px;
 }
 
 .hero span{
 color:#38bdf8;
 }
 
+.hero p{
+font-size:20px;
+opacity:0.8;
+}
+
+/* SECTION */
+
 section{
 max-width:1000px;
 margin:auto;
-padding:60px 20px;
-animation:fadeIn 2s;
+padding:80px 20px;
 }
 
 h2{
 color:#38bdf8;
-margin-bottom:20px;
+margin-bottom:25px;
+font-size:32px;
 }
+
+/* PROJECT GRID */
 
 .projects{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:20px;
+gap:25px;
 }
 
 .card{
 background:#1e293b;
 padding:25px;
-border-radius:12px;
+border-radius:14px;
 transition:0.3s;
 }
 
 .card:hover{
-transform:translateY(-10px);
+transform:translateY(-10px) scale(1.02);
 background:#334155;
 }
+
+/* SKILLS */
+
+.skills span{
+display:inline-block;
+background:#1e293b;
+padding:10px 18px;
+margin:8px;
+border-radius:20px;
+font-size:14px;
+}
+
+/* FOOTER */
 
 footer{
 text-align:center;
 padding:30px;
 background:#020617;
+margin-top:40px;
+opacity:0.7;
 }
 
-/* animations */
+/* FADE ANIMATION */
 
-@keyframes fadeIn{
-from{
+.fade{
 opacity:0;
 transform:translateY(30px);
+animation:fadeIn 1.5s forwards;
 }
+
+@keyframes fadeIn{
 to{
 opacity:1;
 transform:translateY(0);
 }
-}
-
-/* typing effect */
-
-.typing{
-border-right:3px solid #38bdf8;
-white-space:nowrap;
-overflow:hidden;
-width:0;
-animation:typing 3s steps(30,end) forwards;
-}
-
-@keyframes typing{
-from{width:0}
-to{width:300px}
 }
 
 </style>
@@ -115,29 +136,39 @@ to{width:300px}
 <body>
 
 <nav>
-<div><b>Nandini</b></div>
+<div><b>Nandini Garg</b></div>
+
 <div>
 <a href="#">Home</a>
-<a href="#">About</a>
-<a href="#">Projects</a>
-<a href="#">Contact</a>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
 </div>
+
 </nav>
 
-<div class="hero">
-<h1 class="typing">Hi, I'm Nandini</h1>
-<p>Computer Science Student | Future Developer</p>
+<div class="hero fade">
+
+<h1>Hi, I'm <span>Nandini Garg</span></h1>
+
+<p>Computer Science Student • Future Developer</p>
+
 </div>
 
-<section>
+<section id="about" class="fade">
+
 <h2>About Me</h2>
+
 <p>
-First-year Computer Science student interested in programming,
-technology and building innovative projects.
+I am a first-year Computer Science student passionate about technology,
+programming and building creative projects.  
+Currently exploring web development and problem solving.
 </p>
+
 </section>
 
-<section>
+<section id="projects" class="fade">
+
 <h2>Projects</h2>
 
 <div class="projects">
@@ -148,22 +179,41 @@ technology and building innovative projects.
 </div>
 
 <div class="card">
-<h3>Future Coding Projects</h3>
-<p>Planning to build coding and development projects.</p>
+<h3>Upcoming Projects</h3>
+<p>Planning to build coding and development projects as I learn more technologies.</p>
 </div>
 
 </div>
 
 </section>
 
-<section>
+<section class="fade">
+
 <h2>Skills</h2>
-<p>HTML • Programming Basics • Problem Solving</p>
+
+<div class="skills">
+<span>HTML</span>
+<span>Programming Basics</span>
+<span>Problem Solving</span>
+<span>Learning Web Development</span>
+</div>
+
+</section>
+
+<section id="contact" class="fade">
+
+<h2>Contact</h2>
+
+<p>LinkedIn: Add your profile link here</p>
+
 </section>
 
 <footer>
-<p>© 2026 Nandini</p>
+
+<p>© 2026 Nandini Garg</p>
+
 </footer>
 
 </body>
 </html>
+
